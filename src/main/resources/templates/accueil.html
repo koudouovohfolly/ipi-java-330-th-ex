@@ -1,10 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
-<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
-    <title>Gestion des employé</title>
-    <link rel="stylesheet" href="./static/bootstrap.min.css">
-    <link rel="stylesheet" href="./static/font-awesome.css">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header ::head">
+
 </head>
 <body>
 
@@ -32,7 +29,7 @@
 
 <div class="container mt-2">
     <div class="jumbotron">
-        <h1>Bienvenue dans l'interface de gestion des 2499 employés !</h1>
+        <h1>Bienvenue dans l'interface de gestion des <span th:text="${nbEmployes}"></span> employés !</h1>
         <p>Cette application web est paramétrée pour récupérer les données d'une base <em>entreprise</em> sur le serveur MySQL situé à <code>http://localhost:3306</code>.</p>
         <p>Il est nécessaire de développer les contrôleurs et de compléter les JSP existantes. Voici l'ensemble des fonctionnalités :</p>
         <ul class="list-group">
